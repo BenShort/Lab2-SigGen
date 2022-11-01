@@ -11,9 +11,9 @@ VL_INLINE_OPT void Vsinegen___024root___sequent__TOP__0(Vsinegen___024root* vlSe
     Vsinegen__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vsinegen___024root___sequent__TOP__0\n"); );
     // Body
-    vlSelf->dout2 = vlSelf->sinegen__DOT__rom1__DOT__rom_array2
+    vlSelf->dout2 = vlSelf->sinegen__DOT__rom1__DOT__rom_array
         [vlSelf->sinegen__DOT__addr2];
-    vlSelf->dout1 = vlSelf->sinegen__DOT__rom1__DOT__rom_array2
+    vlSelf->dout1 = vlSelf->sinegen__DOT__rom1__DOT__rom_array
         [vlSelf->sinegen__DOT__addr1];
 }
 

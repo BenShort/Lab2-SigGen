@@ -24,7 +24,7 @@ class Vsinegen___024root final : public VerilatedModule {
     CData/*7:0*/ sinegen__DOT__addr2;
     CData/*0:0*/ __Vclklast__TOP__clk;
     CData/*0:0*/ __Vclklast__TOP__rst;
-    VlUnpacked<CData/*7:0*/, 256> sinegen__DOT__rom1__DOT__rom_array2;
+    VlUnpacked<CData/*7:0*/, 256> sinegen__DOT__rom1__DOT__rom_array;
 
     // INTERNAL VARIABLES
     Vsinegen__Syms* const vlSymsp;

@@ -9,21 +9,17 @@ module rom #(
     output logic [7:0]  dout2
 );
 
-logic [DATA_WIDTH-1:0] rom_array1 [2**ADDRESS_WIDTH-1:0];
-logic [DATA_WIDTH-1:0] rom_array2 [2**ADDRESS_WIDTH-1:0];
+logic [DATA_WIDTH-1:0] rom_array [2**ADDRESS_WIDTH-1:0];
 
 initial begin
-    $display("Loading rom 1.");
-    $readmemh("sinerom.mem", rom_array1);
-
-    $display("Loading rom 2.");
-    $readmemh("sinerom.mem", rom_array2);
+    $display("Loading rom.");
+    $readmemh("sinerom.mem", rom_array);
 end
 
 always_ff @(posedge clk) begin
     //output is synchronous
-    dout1 <= rom_array2[addr1];
-    dout2 <= rom_array2[addr2];
+    dout1 <= rom_array[addr1];
+    dout2 <= rom_array[addr2];
 end
 
 endmodule
