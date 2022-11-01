@@ -18,7 +18,7 @@ always_ff @(posedge clk, posedge rst) begin
     end
     else if (en == 1'b1) begin
         count1 <= count1 + incr;
-        count2 <= count1 + incr +incr + offset; 
+        count2 <= count1 + incr - offset; //can't read the most active value
     end
 end
 endmodule

@@ -24,6 +24,8 @@ VL_INLINE_OPT void Vsigdelay___024root___sequent__TOP__1(Vsigdelay___024root* vl
     CData/*0:0*/ __Vdlyvset__sigdelay__DOT__ram__DOT__ram_array__v0;
     // Body
     __Vdlyvset__sigdelay__DOT__ram__DOT__ram_array__v0 = 0U;
+    VL_WRITEF("%3#\n%3#\n",9,vlSelf->sigdelay__DOT__count1,
+              9,(IData)(vlSelf->sigdelay__DOT__count2));
     if (vlSelf->wr) {
         __Vdlyvval__sigdelay__DOT__ram__DOT__ram_array__v0 
             = vlSelf->mic_signal;
@@ -53,10 +55,10 @@ VL_INLINE_OPT void Vsigdelay___024root___sequent__TOP__2(Vsigdelay___024root* vl
         vlSelf->__Vdly__sigdelay__DOT__count1 = (0x1ffU 
                                                  & ((IData)(1U) 
                                                     + (IData)(vlSelf->sigdelay__DOT__count1)));
-        vlSelf->sigdelay__DOT__count2 = (0x1ffU & ((IData)(2U) 
-                                                   + 
-                                                   ((IData)(vlSelf->sigdelay__DOT__count1) 
-                                                    + (IData)(vlSelf->offset))));
+        vlSelf->sigdelay__DOT__count2 = (0x1ffU & (
+                                                   ((IData)(1U) 
+                                                    + (IData)(vlSelf->sigdelay__DOT__count1)) 
+                                                   - (IData)(vlSelf->offset)));
     }
     vlSelf->sigdelay__DOT__count1 = vlSelf->__Vdly__sigdelay__DOT__count1;
 }

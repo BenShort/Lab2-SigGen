@@ -16,6 +16,9 @@ module dual_port_ram # (
 logic [DATA_WIDTH-1:0] ram_array [2**ADDRESS_WIDTH-1:0];
 
 always_ff @(posedge clk) begin
+    $display(wr_addr);
+    $display(rd_addr);
+
     if (wr_en == 1'b1) begin
         ram_array[wr_addr] <= din;
     end
